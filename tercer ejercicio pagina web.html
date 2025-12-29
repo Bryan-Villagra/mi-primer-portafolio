@@ -1,0 +1,62 @@
+<!--con esto avisamos al navegador que estamos trabajando con un documento html -->
+<!DOCTYPE html>  
+<html lang="es"> <!--que el lenguaje que usaremos es español-->
+<head>  <!-- el head sirve para indicar los principales parametros del codigo-->
+    <meta charset="UTF-8"> <!-- que admita caracteres especiales como acentos o eñes-->
+    <title>Mi Tercer Página</title> <!-- el titulo principal de la pagina -->
+    <link rel="stylesheet" href="style 2.css"> <!-- >con esto llamamos al archivo css escrito en otra ventana-->
+
+</head>
+
+<body> <!--el body es el cuerpo del programa-->
+    <header> <!-- header es el encabezado de la pagina-->
+        <h1> Hola a todos </h1> 
+    </header>
+
+    <main> <!-- main indica el contenido principal de la pagina web (encapsulando el contenido central) -->
+        <section> <!--define una seccion tematica general de un documento-->
+            <h2>Sobre mi</h2>
+            <p>Soy Brian Villagra, soy tecnico en Informatica y Estudiante de Ciencia de Datos</p>
+        </section>
+
+    <section>
+    <h2>Mis Proyectos Dinámicos</h2>
+    <input type="text" id="buscador" placeholder="Escribe una tecnología (Python, C++...)" 
+           style="padding: 10px; width: 100%; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
+        <!-- input crea campos interactivos dentro de un formulario-->
+    <div id="contenedor-proyectos"></div> <!--es un contenedor generico en forma de bloque, el id= le agrega un nombre unico para identificarlo-->
+    </section> 
+    
+    </main>
+
+        <!--
+        class: para el css
+        id: para el JavaScript -->
+
+    <section class="seccion-contador">
+        <h2>Contador de Clics</h2>
+        <p id="numero">0</p> 
+        <div class="contenedor-botones">
+            <button id="btn-sumar">¡Sumar!</button>
+            <button id="btn-reset">Resetear</button>
+        </div>
+    </section>
+
+    <section id="caja-visitante">
+    <h2>Nuestro último visitante</h2>
+    <img id="foto-api" src="" alt="Foto" width="100">
+    
+    <p id="nombre-api">Cargando nombre...</p>
+    <p id="pais-api" style="font-style: italic; color: gray;">buscando pais...</p>
+    
+    <button id="boton-actualizar">Ver otros visitantes</button>
+</section>
+
+    <footer> <!--es el pie de pagina de la pagina web, normalmente va la informacion de contacto-->
+        <p>Correo:📧​Brianvillagra16@gmail.com</p>
+        <p>Telefono:📞​3835-434614</p>
+    </footer>
+    
+    <script src="script 2.js"> </script>
+</body>
+

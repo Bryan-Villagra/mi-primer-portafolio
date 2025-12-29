@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Declaramos las variables con dos guiones al principio */
+    --color-principal: #2c3e50;
+    --color-secundario: #27ae60;
+    --color-fondo: #f4f4f4;
+    --fuente-base: 'Arial', sans-serif;
+}
+body {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: var(--color-fondo);
+            font-family: var(--fuente-base);
+            
+        }
+
+        header { /* el background-image sirve para agregar de fondo una imagen */ 
+            background-image: linear-gradient(rgba(255, 85, 11, 0.2), rgba(2, 55, 129, 0.5)), 
+                                url('imagen/Imagenfondo.jpeg');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        section {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: var(--color-secundario);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #27ae60;
+        }
+        .contenedor-botones {
+            display:flex; /*activamos el modo flexbox */
+            justify-content: center;  /* centra los botones horizontalmente */
+            gap: 40px; /*crea un espacio exacto de 20 px entre los botones */
+            margin-top: 15px; /*separa los botones del texto de arriba */
+        }
+        .seccion-contador {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }       
+
+        #numero {
+            font-size: 3rem; /* Tamaño grande */
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+        
+        /* Cuando la pantalla sea de 600px o MENOS (celulares) */
+        @media (max-width: 600px) {
+        body {
+        padding: 10px;
+        }
+
+        .contenedor-botones {
+        flex-direction: column; /* ¡Los botones se ponen uno arriba del otro! */
+        gap: 10px;
+    }
+
+        header h1 {
+        font-size: 1.5rem; /* Achicamos el título para que no se corte */
+    }
+}
+input[type="text"] {
+    /* Esta línea es la clave: hace que el padding se cuente DENTRO del 100% */
+    box-sizing: border-box; 
+    
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+#caja-visitante {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
